@@ -20,3 +20,18 @@ const admin = {
   show: user.show,
 };
 admin.show();
+
+function User(name) {
+  this.name = name;
+  return this;
+}
+
+const u = new User('Tima');
+const u2 = new User('Ne Tima');
+console.log(u);
+console.log(u2);
+
+function showCall() {
+  console.log(this.name);
+}
+showCall.call({ name: 'Toni' });
