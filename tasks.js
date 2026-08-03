@@ -1,23 +1,37 @@
-'use strict';
+const dog = { name: 'dog' };
+const cat = { name: 'cat' };
 
-function show() {
-  console.log(this);
+function sayName() {
+  console.log(this.name);
 }
 
-show();
+dog.sayName = sayName;
+cat.sayName = sayName;
 
-const user = {
-  name: 'Тима',
-  show: function () {
+dog.sayName();
+cat.sayName();
+
+// 4)
+
+const obj = {
+  name: 'Tima',
+  fn: function () {
+    console.log(this.name);
+    const arrow = () => {
+      console.log(this.name);
+    };
+    return arrow;
+  },
+};
+
+obj.fn()();
+
+// 5)
+const obj2 = {
+  name: 'Gg',
+  showName: () => {
     console.log(this.name);
   },
 };
 
-user.show();
-
-const admin = {
-  name: 'Admin',
-  show: user.show,
-};
-admin.show();
-console.log('check how work git reset --soft');
+obj2.showName();
