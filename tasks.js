@@ -20,3 +20,4 @@ const admin = {
   show: user.show,
 };
 admin.show();
+console.log('check how work git reset --soft');
