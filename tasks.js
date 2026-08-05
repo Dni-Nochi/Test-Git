@@ -40,3 +40,6 @@ console.log('Пишу из ветки develop');
 console.log('Пишу из ветки develop 2');
 
 console.log('develop3');
+
+console.log('develop');
+console.log('test');
