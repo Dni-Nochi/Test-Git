@@ -35,3 +35,6 @@ const obj2 = {
 };
 
 obj2.showName();
+
+console.log('Пишу из ветки develop');
+console.log('Пишу из ветки develop 2');
