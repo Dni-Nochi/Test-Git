@@ -9,3 +9,5 @@ function sayHello2() {
 function noErrorFunction() {
   console.log('realy no error');
 }
+
+console.log('for commit');
