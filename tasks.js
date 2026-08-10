@@ -1,44 +1,17 @@
-const dog = { name: 'dog' };
-const cat = { name: 'cat' };
-
-function sayName() {
-  console.log(this.name);
+// Задача с NeetCode Contains Duplicate
+class Solution {
+  hasDuplicate(arr) {
+    const mySet = new Set();
+    for (let i = 0; i < arr.length; i++) {
+      if (mySet.has(arr[i])) {
+        return true;
+      } else {
+        mySet.add(arr[i]);
+      }
+    }
+    return false;
+  }
 }
 
-dog.sayName = sayName;
-cat.sayName = sayName;
-
-dog.sayName();
-cat.sayName();
-
-// 4)
-
-const obj = {
-  name: 'Tima',
-  fn: function () {
-    console.log(this.name);
-    const arrow = () => {
-      console.log(this.name);
-    };
-    return arrow;
-  },
-};
-
-obj.fn()();
-
-// 5)
-const obj2 = {
-  name: 'Gg',
-  showName: () => {
-    console.log(this.name);
-  },
-};
-
-obj2.showName();
-
-console.log('Пишу из ветки develop');
-console.log('Пишу из ветки develop 2');
-console.log('develop3');
-console.log('develop');
-
-console.log('test, chekc how work git rm --cached <file name>');
+const giveArr = new Solution();
+console.log(giveArr.hasDuplicate([1, 2, 3]));
