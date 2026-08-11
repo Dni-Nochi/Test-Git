@@ -1,44 +1,88 @@
-const dog = { name: 'dog' };
-const cat = { name: 'cat' };
+// Задача 1: Find Max
+// class FindMax {
+//   constructor(arr) {
+//     this.arr = arr;
+//   }
 
-function sayName() {
-  console.log(this.name);
-}
+//   findMaxValue() {
+//     let maxValue = this.arr[0];
+//     for (let i = 0; i < this.arr.length; i++) {
+//       console.log(this.arr[i]);
+//       if (this.arr[i] > maxValue) {
+//         maxValue = this.arr[i];
+//       }
+//     }
+//     console.log(maxValue, 'Max V');
+//     return maxValue;
+//   }
+// }
 
-dog.sayName = sayName;
-cat.sayName = sayName;
+// const test = new FindMax([-5, -2, -10]);
+// test.findMaxValue();
 
-dog.sayName();
-cat.sayName();
+// Задача 2: Count Vowels
 
-// 4)
+// class Vowels {
+//   constructor(str) {
+//     this.str = str.toLowerCase();
+//   }
 
-const obj = {
-  name: 'Tima',
-  fn: function () {
-    console.log(this.name);
-    const arrow = () => {
-      console.log(this.name);
-    };
-    return arrow;
-  },
-};
+//   countVowels() {
+//     const vowelsConst = ['a', 'e', 'i', 'o', 'u'];
+//     let countVowelsSummary = 0;
+//     for (let i = 0; i < this.str.length; i++) {
+//       if (vowelsConst.includes(this.str[i])) {
+//         countVowelsSummary++;
+//         console.log(this.str[i]);
+//       }
+//     }
+//     return countVowelsSummary;
+//   }
+// }
 
-obj.fn()();
+// const hello = new Vowels('hello');
+// console.log(hello.countVowels());
 
-// 5)
-const obj2 = {
-  name: 'Gg',
-  showName: () => {
-    console.log(this.name);
-  },
-};
+// Задача 3: Reverse a String
 
-obj2.showName();
+// class ReverseString {
+//   constructor(str) {
+//     this.str = str;
+//   }
 
-console.log('Пишу из ветки develop');
-console.log('Пишу из ветки develop 2');
-console.log('develop3');
-console.log('develop');
+//   reverseStr() {
+//     let reverse = '';
+//     console.log(this.str);
+//     for (let i = this.str.length - 1; i >= 0; i--) {
+//       reverse = reverse + this.str[i];
+//     }
+//     return reverse;
+//   }
+// }
 
-console.log('test, chekc how work git rm --cached <file name>');
+// Задача 4: Most Frequent Character
+
+// class MostCharacter {
+//   constructor(character) {
+//     this.character = character;
+//   }
+
+//   giveMostFrequentCharacter() {
+//     let objChar = {};
+//     for (let i = 0; i < this.character.length; i++) {
+//       if (objChar[this.character[i]] === undefined) {
+//         objChar[this.character[i]] = 1;
+//       } else {
+//         objChar[this.character[i]] = objChar[this.character[i]] + 1;
+//         console.log(objChar[this.character[i]], this.character[i], objChar);
+//       }
+//     }
+//     Object.keys(objChar).forEach((key) => {
+//       console.log(key, objChar, objChar[key]);
+//     });
+//   }
+// }
+
+// const char = new MostCharacter('abccacac');
+
+// char.giveMostFrequentCharacter();
