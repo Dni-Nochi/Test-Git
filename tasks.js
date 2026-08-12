@@ -86,39 +86,39 @@
 // const char = new MostCharacter('abccacac');
 
 // char.giveMostFrequentCharacter();
-class Solution {
-  isAnagram(s, t) {
-    console.log(s, t);
-    let objRepeatingLetters = {};
-    let objRepeatingLetters2 = {};
-    if (s.length === t.length) {
-      for (let i = 0; i < s.length; i++) {
-        if (objRepeatingLetters[s[i]] === undefined) {
-          objRepeatingLetters[s[i]] = 1;
-        } else {
-          objRepeatingLetters[s[i]] = objRepeatingLetters[s[i]] + 1;
-        }
-      }
-      for (let i = 0; i < t.length; i++) {
-        if (objRepeatingLetters2[t[i]] === undefined) {
-          objRepeatingLetters2[t[i]] = 1;
-        } else {
-          objRepeatingLetters2[t[i]] = objRepeatingLetters2[t[i]] + 1;
-        }
-      }
-    } else {
-      return false;
-    }
-    const keys = Object.keys(objRepeatingLetters);
-    for (let i = 0; i < keys.length; i++) {
-      if (objRepeatingLetters[keys[i]] === objRepeatingLetters2[keys[i]]) {
-      } else {
-        return false;
-      }
-    }
-    return true;
-  }
-}
-// {}
-const result = new Solution();
-console.log(result.isAnagram('ab', 'ac'));
+// class Solution {
+//   isAnagram(s, t) {
+//     console.log(s, t);
+//     let objRepeatingLetters = {};
+//     let objRepeatingLetters2 = {};
+//     if (s.length === t.length) {
+//       for (let i = 0; i < s.length; i++) {
+//         if (objRepeatingLetters[s[i]] === undefined) {
+//           objRepeatingLetters[s[i]] = 1;
+//         } else {
+//           objRepeatingLetters[s[i]] = objRepeatingLetters[s[i]] + 1;
+//         }
+//       }
+//       for (let i = 0; i < t.length; i++) {
+//         if (objRepeatingLetters2[t[i]] === undefined) {
+//           objRepeatingLetters2[t[i]] = 1;
+//         } else {
+//           objRepeatingLetters2[t[i]] = objRepeatingLetters2[t[i]] + 1;
+//         }
+//       }
+//     } else {
+//       return false;
+//     }
+//     const keys = Object.keys(objRepeatingLetters);
+//     for (let i = 0; i < keys.length; i++) {
+//       if (objRepeatingLetters[keys[i]] === objRepeatingLetters2[keys[i]]) {
+//       } else {
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+// }
+// // {}
+// const result = new Solution();
+// console.log(result.isAnagram('ab', 'ac'));
