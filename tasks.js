@@ -142,36 +142,36 @@
 
 // console.log(testEntriesFormatted);
 
-class Products {
-  constructor(products, minPrice) {
-    this.products = products;
-    this.minPrice = minPrice;
-  }
+// class Products {
+//   constructor(products, minPrice) {
+//     this.products = products;
+//     this.minPrice = minPrice;
+//   }
 
-  allPrice() {
-    console.log(this.products);
-    let sumPrices = 0;
-    let categoryObject = {};
-    for (let i = 0; i < this.products.length; i++) {
-      if (categoryObject[this.products[i].category] === undefined) {
-        categoryObject[this.products[i].category] = this.products[i].price;
-      } else {
-        categoryObject[this.products[i].category] =
-          categoryObject[this.products[i].category] + this.products[i].price;
-      }
-    }
-    console.log(categoryObject);
-    return sumPrices;
-  }
-}
+//   allPrice() {
+//     console.log(this.products);
+//     let sumPrices = 0;
+//     let categoryObject = {};
+//     for (let i = 0; i < this.products.length; i++) {
+//       if (categoryObject[this.products[i].category] === undefined) {
+//         categoryObject[this.products[i].category] = this.products[i].price;
+//       } else {
+//         categoryObject[this.products[i].category] =
+//           categoryObject[this.products[i].category] + this.products[i].price;
+//       }
+//     }
+//     console.log(categoryObject);
+//     return sumPrices;
+//   }
+// }
 
-const userProducts = new Products(
-  [
-    { name: 'apple', price: 10, category: 'fruit' },
-    { name: 'banana', price: 5, category: 'veggie' },
-    { name: 'cherry', price: 20, category: 'fruit' },
-    { name: 'melon', price: 30, category: 'veggie' },
-  ],
-  15,
-);
-console.log(userProducts.allPrice());
+// const userProducts = new Products(
+//   [
+//     { name: 'apple', price: 10, category: 'fruit' },
+//     { name: 'banana', price: 5, category: 'veggie' },
+//     { name: 'cherry', price: 20, category: 'fruit' },
+//     { name: 'melon', price: 30, category: 'veggie' },
+//   ],
+//   15,
+// );
+// console.log(userProducts.allPrice());
